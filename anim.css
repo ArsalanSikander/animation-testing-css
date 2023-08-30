@@ -1,6 +1,7 @@
 body{
     display: flex;
     place-content: center;
+    color:white;
 }
 
 .card{
@@ -10,7 +11,8 @@ body{
     text-align: center;
     background-image: url("https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80");        
     background-size: 450%;    
-    transition : background-position 370ms;
+    transition : background-position 550ms;
+    overflow:hidden;
 }
 
 
@@ -24,6 +26,8 @@ body{
     font-family: serif;
     font-style: italic;
     opacity: 0;
+    transform: translateY(50%);
+    transition: transform 100ms 100ms, opacity 1000ms 100ms ;
 }
 
 h2{
@@ -40,7 +44,8 @@ button{
     border : none;
     color : white;
     opacity: 0;
-    transition-delay: 1s;
+    transition: 350ms;
+    transition-delay: 0.15s;
     
 }
 
@@ -58,4 +63,5 @@ button:hover{
 
 .card:hover .card-content > p, .card:hover .card-content button {
     opacity: 100%;
+    transform : translateY(0);
 }
